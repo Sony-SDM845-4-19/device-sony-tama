@@ -95,7 +95,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # A/B support
 AB_OTA_UPDATER := true
-PRODUCT_SHIPPING_API_LEVEL := 26
+
+# Platform has been launched on Android 8 (API level 26)
+# Workaround for the bug: https://github.com/sonyxperiadev/bug_tracker/issues/851.
+# Caused by: https://android.googlesource.com/platform/art/+/760e495e79c03ce9c748a93ff42e6e3dd00bfc05.
+# Google addressed it in the commit: https://android.googlesource.com/platform/art/+/84c0eddb305a3248046edd3f2f8bba03aab3efec,
+# but it’s likely that this will never be backported to Android 14, and the simplest
+# way to workaround this is to bump the Shipping API level to 30.
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # A/B OTA dexopt package
 PRODUCT_PACKAGES += \
