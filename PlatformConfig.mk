@@ -51,6 +51,10 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 3
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 
+# This platform has a metadata partition: declare this
+# to create a mount point for it
+BOARD_USES_METADATA_PARTITION := true
+
 # DTBO partition definitions
 TARGET_NEEDS_DTBOIMAGE ?= true
 
