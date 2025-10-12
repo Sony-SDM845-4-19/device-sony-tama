@@ -407,7 +407,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.disable_ubwc=0 \
-    vendor.display.disable_scaler=0
+    vendor.display.disable_scaler=1
 
 # Display - HDR/WCG
 PRODUCT_PROPERTY_OVERRIDES += \
